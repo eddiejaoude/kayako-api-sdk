@@ -19,7 +19,7 @@ before_script:
 
 script:
   - ./vendor/bin/phpspec run --config=tests/phpspec.yml -vvv --format pretty
-  - ./vendor/bin/behat --config=tests/behat.yml -vvv --format progress
+  - ./vendor/bin/behat --config=tests/behat.yml -vvv
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/build/coverage.xml
 
