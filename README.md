@@ -15,9 +15,9 @@ For Kayako 'Helpdesk Evolved' API
 
 ## The focus of this library is:
 
-* Separation of concerns & Single responsibility principles
+* SOLID - Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion
 * TDD / BDD Test automation with PHPSpec and Behat
-* Easily update / migrate to newer versions of the API *(inc. data structures / formats)*
+* Easily update / migrate to newer versions of the API *(inc. data structures / formats)* using Adapters
 * Build and run all **automated tests** for multiple versions of PHP (eg. 5.4, 5.5, 5.6 ...)
 
 ## Future possibilities
