@@ -1,0 +1,5 @@
+default:
+    autoload:
+        '': tests/features/bootstrap
+    formatters:
+        pretty: true
