@@ -11,6 +11,7 @@ matrix:
 
 before_install:
   - echo "always_populate_raw_post_data=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - pip install codecov
 
 before_script:
   - curl -s http://getcomposer.org/installer | php
@@ -22,6 +23,9 @@ script:
 #  - ./vendor/bin/behat --config=tests/behat.yml -vvv --format progress
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/build/coverage.xml
+
+after_success:
+  - codecov
 
 branches:
   except:
