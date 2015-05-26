@@ -22,7 +22,7 @@ For Kayako 'Helpdesk Evolved' API
 
 ## Future possibilities
 
-* Use different versions of the APi with the same SDK with **Adapters**
+* Use different versions of the API with the same SDK with **Adapters**
 * Parallelisation of **requests** to greatly improve performance *(easily achieved with Guzzle)*
 * First pass validation (simple validation before **request** is sent, final validation still occurs on API)
 
@@ -93,7 +93,7 @@ Run PHPSpec test suite
 ./vendor/bin/phpspec run --config=tests/phpspec.yml -vvv
 ```
 
-Output
+Example Output
 
 ```
                                       100%                                       9
@@ -110,7 +110,7 @@ Run Behat test suite
 ./vendor/bin/behat --config tests/behat.yml -vvv
 ```
 
-Output
+Example Output
 
 ```
 Feature: Using the Ticket SDK with the Kayako API
