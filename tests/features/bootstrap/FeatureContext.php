@@ -33,5 +33,54 @@ class FeatureContext implements Context, SnippetAcceptingContext
     {
     }
 
-    
+    /**
+     * @TODO implement authentication
+     *
+     * @Given I am authenticated
+     */
+    public function iAmAuthenticated()
+    {
+        return;
+    }
+
+    /**
+     * @When I request a ticket by ID :arg1
+     */
+    public function iRequestATicketById($arg1)
+    {
+        $this->request = $arg1;
+
+        /** @var Kayako\PhpApiSdk\Service\TicketService $ticket */
+        $service = \Kayako\PhpApiSdk\Builder::create()->build('ticket');
+        $this->response = $service->getById($arg1);
+    }
+
+    /**
+     * @Then I should receive the ticket
+     */
+    public function iShouldReceiveTheTicket()
+    {
+        if ($this->response instanceof \Kayako\PhpApiSdk\Entity\Ticket)
+        {
+            return true;
+        }
+
+        throw new \Exception('Wrong type in response');
+    }
+
+    /**
+     * @Then the ticket ID should match
+     */
+    public function theTicketIdShouldMatch()
+    {
+        if ($this->response->getId() == $this->request) {
+            return true;
+        }
+
+        throw new \Exception(
+            'IDs do NOT match. ' .
+            'Expected: ' . $this->request .
+            ', Actual: ' . $this->response->getId()
+        );
+    }
 }
