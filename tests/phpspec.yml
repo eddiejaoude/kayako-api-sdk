@@ -1,0 +1,18 @@
+suites:
+  default:
+    namespace: Kayako\PhpApiSdk
+    spec_prefix: Spec
+    spec_path: tests
+
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+
+code_coverage:
+  whitelist:
+    - src
+  format:
+    - html
+    - clover
+  output:
+    html: tests/build/coverage
+    clover: tests/build/coverage.xml

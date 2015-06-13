@@ -1,0 +1,29 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+
+matrix:
+  allowed_failures:
+    - php: 7
+  fast_finish: true
+
+before_install:
+  - echo "always_populate_raw_post_data=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+before_script:
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar self-update
+  - php composer.phar install --dev --no-interaction
+
+script:
+  - ./vendor/bin/phpspec run --config=tests/phpspec.yml -vvv --format pretty
+  - ./vendor/bin/behat --config=tests/behat.yml -vvv
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover tests/build/coverage.xml
+
+branches:
+  except:
+    - /^build-[0-9a-z\-\/]*/

@@ -1,0 +1,29 @@
+{
+  "name": "kayako/php-api-sdk",
+  "description": "PHP API SDK client for Kayako APIs",
+  "authors": [
+    {
+      "name": "Eddie Jaoude",
+      "email": "eddie@jaoudestudios.com",
+      "homepage": "https://github.com/eddiejaoude"
+    }
+  ],
+  "license": "MIT",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Kayako\\PhpApiSdk\\": "src/"
+    },
+    "files": ["autoload.php"]
+  },
+  "require": {
+    "php": ">=5.4",
+    "mnapoli/php-di": "~4.0",
+    "guzzlehttp/guzzle": "~3.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "~2.0",
+    "henrikbjorn/phpspec-code-coverage": "~1.0",
+    "behat/behat": "~3"
+  }
+}
