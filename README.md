@@ -3,7 +3,7 @@
 | build | --- | --- | [![Build Status](https://travis-ci.org/eddiejaoude/kayako-api-sdk.svg?branch=feature%2F1-get-ticket)](https://travis-ci.org/eddiejaoude/kayako-api-sdk) |
 | Scrutinizer | --- | --- | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/eddiejaoude/kayako-api-sdk/badges/quality-score.png?b=feature%2F1-get-ticket)](https://scrutinizer-ci.com/g/eddiejaoude/kayako-api-sdk/?branch=feature%2F1-get-ticket) |
 | Coverage | --- | --- | [![Code Coverage](https://scrutinizer-ci.com/g/eddiejaoude/kayako-api-sdk/badges/coverage.png?b=feature%2F1-get-ticket)](https://scrutinizer-ci.com/g/eddiejaoude/kayako-api-sdk/?branch=feature%2F1-get-ticket) |
-| Dashboard | --- | --- | [![DashboardHub Badge](http://dashboardhub.io/badge/5563ffdabbf0d1.00515209 "DashboardHub Badge")](http://dashboardhub.io/d/5563ffdabbf0d1.00515209) |
+| Dashboard | --- | --- | [![DashboardHub Badge](http://badge.dashboardhub.io/badge/5563ffdabbf0d1.00515209 "DashboardHub Badge")](http://pipeline.dashboardhub.io/d/5563ffdabbf0d1.00515209) |
 | Version Eye | --- | --- | [![Dependency Status](https://www.versioneye.com/user/projects/556403433637640016f80100/badge.svg?style=flat)](https://www.versioneye.com/user/projects/556403433637640016f80100) |
 
 # Kayako - PHP SDK
